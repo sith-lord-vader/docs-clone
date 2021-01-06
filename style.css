@@ -61,6 +61,7 @@ body {
 	width: calc(100vw - 6rem);
 	display: flex;
 	padding: 0.5rem;
+	flex-wrap: wrap;
 	margin: 0.75rem 2rem 0rem 2rem;
 	border-radius: 0.5rem;
 	justify-content: space-evenly;
