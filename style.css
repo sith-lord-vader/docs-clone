@@ -1,74 +1,97 @@
+:root {
+    --primary-color: #e72134;
+    --mode-color: black;
+    --complementary-color: white;
+}
+
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	overflow-x: hidden;
+    overflow-x: hidden;
+}
+.sairyo-heading {
+    color: var(--primary-color);
 }
 
 .edit-content {
-	min-height: 100vh;
-	display: grid;
-	grid-template-rows: auto auto 1fr;
-	max-width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    max-width: 100%;
+    background-color: var(--mode-color);
 }
 
 .edit-content h2 {
-	text-align: center;
-	padding-top: 0.25rem;
+    text-align: center;
+    padding-top: 0.25rem;
 }
 
 .edit-content span {
-	color: black;
-	padding: 0.25rem;
-	margin: 0.25rem;
-	border: solid black 1px;
-	border-radius: 0.25rem;
+    color: var(--primary-color);
+    padding: 0.25rem;
+    margin: 0.25rem;
+    border: solid var(--primary-color) 1px;
+    border-radius: 0.25rem;
+}
+.edit-content span:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.2s;
 }
 
 .edit-content select {
-	color: black;
-	padding: 0.25rem;
-	margin: 0.25rem;
-	border: solid black 1px;
+    color: var(--complementary-color);
+    background-color: var(--primary-color);
+    padding: 0.25rem;
+    margin: 0.25rem;
+    border: solid black 1px;
 }
 
 .edit-content a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .editor {
-	border: solid grey 1px;
-	margin: 1rem 2rem 2rem 2rem;
-	border-radius: 0.5rem;
-	padding: 0.5rem;
-	box-shadow: rgb(0, 0, 0) 1px 1px 2px;
-	width: calc(100vw - 6rem);
+    border: solid grey 1px;
+    color: var(--complementary-color);
+    margin: 1rem 2rem 2rem 2rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: rgb(0, 0, 0) 1px 1px 2px;
+    width: calc(100vw - 6rem);
 }
 
 .active span {
-	background-color: black;
-	color: white;
+    background-color: var(--primary-color);
+    color: var(--complementary-color);
+    transform: scale(1.2);
 }
 
 .editor:focus {
-	outline: none;
-	box-shadow: black 2px 2px 3px;
+    outline: none;
+    box-shadow: var(--primary-color) 2px 2px 3px;
 }
 
 .buttons {
-	width: calc(100vw - 6rem);
-	display: flex;
-	padding: 0.5rem;
-	flex-wrap: wrap;
-	margin: 0.75rem 2rem 0rem 2rem;
-	border-radius: 0.5rem;
-	justify-content: space-evenly;
-	border: solid grey 1px;
-	box-shadow: black 2px 2px 3px;
+    width: calc(100vw - 6rem);
+    display: flex;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+    margin: 0.75rem 2rem 0rem 2rem;
+    border-radius: 0.5rem;
+    justify-content: space-evenly;
+    border: solid grey 1px;
+    box-shadow: var(--primary-color) 2px 2px 3px;
 }
 
-.editor ul {
-	padding-left: 1rem;
+.editor ul,
+.editor ol {
+    padding-left: 1rem;
+}
+
+#modeToggler {
+    margin-top: 5px;
 }
